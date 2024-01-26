@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  streamlit-app:
+    build:
+      context: ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - flask-app
+    environment:
+      FLASK_ENDPOINT: "http://flask-app:5000"
+
+  flask-app:
+    build:
+      context: engine
+    ports:
+      - "5000:5000"
