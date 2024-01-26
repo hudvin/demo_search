@@ -29,3 +29,5 @@ Tools like word2vec and many transformers produce satisfactory results for short
 Comprehensive tests and handling of all possible errors and cases have not been implemented.
 
 Flask is being used without Gunicorn.
+
+TfidfVectorizer provides some basic text preprocessing(like lowercasing and tokenization), but in general it could be improved
